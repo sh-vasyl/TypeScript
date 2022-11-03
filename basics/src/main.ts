@@ -1,12 +1,11 @@
 import './style.css'
 
+let userInput: unknown
+let userName: string
 
-function addAndHandle(n1: number, n2: number, cb: (num: number) => void) {
-	const result = n1 + n2
-	cb(result)
+userInput = 5
+userInput = 'Max'
+
+if (typeof userInput === 'string') {
+	userName = userInput
 }
-
-addAndHandle(10, 2, (result) => {
-	console.log(result);
-})
-
