@@ -1,21 +1,11 @@
 import './style.css'
 
-type Combinable = number | string
 
-function combine(input1: Combinable, input2: Combinable) {
-	let result;
-	if (typeof input1 === 'number' && typeof input2 === 'number') {
-		result = input1 + input2
-	} else {
-		result = input1.toString() + input2.toString()
-	}
-	return result
+function addNumbers(n1: number, n2: number) {
+	return n1 + n2
 }
 
-const combineAdges = combine(30, 26)
-console.log(combineAdges);
+let combineValues: (a: number, b: number) => number
 
-const combineNames = combine('Max', 'Vasyl ')
-console.log(combineNames);
-
+combineValues = addNumbers
 
