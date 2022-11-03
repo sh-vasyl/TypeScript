@@ -1,11 +1,12 @@
 import './style.css'
 
 
-function addNumbers(n1: number, n2: number) {
-	return n1 + n2
+function addAndHandle(n1: number, n2: number, cb: (num: number) => void) {
+	const result = n1 + n2
+	cb(result)
 }
 
-let combineValues: (a: number, b: number) => number
-
-combineValues = addNumbers
+addAndHandle(10, 2, (result) => {
+	console.log(result);
+})
 
